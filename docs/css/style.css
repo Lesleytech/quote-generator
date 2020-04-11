@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f3fcff;
+    line-height: 1.2;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+#loading-div {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#loader {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid #579;
+    border-right-color: transparent;
+    animation: spin 0.5s infinite ease-out;
+}
+
+#quotes-container {
+    position: relative;
+    height: fit-content;
+    width: 90%;
+    max-width: 600px;
+    background: #579;
+    border-radius: 8px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    color: white;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+    margin: 20px 0 45px;
+}
+
+#quote-info {
+    transition: all 0.5s ease-in;
+}
+
+#quote {
+    margin-top: 30px;
+    font-size: 32px;
+    text-align: justify;
+}
+
+#quote i {
+    font-size: 38px;
+}
+
+#author {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+button {
+    font-size: 18px;
+    color: #579;
+    background: #f3fcff;
+    border: 0px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    margin: 30px 0;
+    float: right;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+}
+
+button:hover {
+    background: #f1f1ff;
+}
+
+button:focus {
+    outline: none;
+    background: #f3fcff;
+}
+
+#error {
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+small {
+    position: absolute;
+    bottom: 10px;
+    color: #333;
+}
+
+#heart {
+    color: red;
+    animation: blink 3s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 100;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    #quote {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
