@@ -68,7 +68,6 @@ body {
 
 #quote::-webkit-scrollbar {
     display: none;
-    -ms-overflow-style: none;
 }
 
 #author {
@@ -152,7 +151,7 @@ hr {
     }
 }
 
-@media (max-height: 360px) {
+@media (max-height: 400px) {
     #quote {
         max-height: 120px;
     }
