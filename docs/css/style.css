@@ -151,6 +151,12 @@ hr {
     }
 }
 
+@media (max-height: 480px) {
+    #quote {
+        max-height: 190px;
+    }
+}
+
 @media (max-height: 400px) {
     #quote {
         max-height: 120px;
