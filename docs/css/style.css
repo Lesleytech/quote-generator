@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
     height: 100%;
@@ -68,6 +72,7 @@ body {
     text-align: right;
     font-size: 20px;
     margin-top: 30px;
+    color: #f3fcff;
 }
 
 button {
