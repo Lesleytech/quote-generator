@@ -25,7 +25,7 @@ function getQuote() {
             quoteInfo.innerHTML = `<div id="error">Failed to load quote!!!</div>`;
             shuffleButton.innerHTML = `<i class="fa fa-refresh" aria-hidden="true"></i> Reload`;
             shuffleButton.addEventListener("click", () => {
-                getQuote();
+                location.reload();
             });
         });
 }
