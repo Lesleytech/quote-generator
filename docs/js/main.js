@@ -13,7 +13,7 @@ function getQuote() {
         .then(data => {
             loadingContainer.style.display = "none";
             quotesContainer.style.display = "block";
-            shuffleButton.innerHTML = "Shuffle";
+            shuffleButton.innerHTML = `<i class="fa fa-random" aria-hidden="true"></i> Shuffle`;
             shuffleButton.addEventListener("click", () => {
                 showQuotes(data);
             });
@@ -23,7 +23,7 @@ function getQuote() {
             loadingContainer.style.display = "none";
             quotesContainer.style.display = "block";
             quoteInfo.innerHTML = `<div id="error">Failed to load quote!!!</div>`;
-            shuffleButton.innerHTML = "Reload"
+            shuffleButton.innerHTML = `<i class="fa fa-refresh" aria-hidden="true"></i> Reload`;
             shuffleButton.addEventListener("click", () => {
                 getQuote();
             });
