@@ -75,6 +75,7 @@ body {
     font-size: 20px;
     margin-top: 30px;
     color: #f3fcff;
+    font-style: italic;
 }
 
 button {
@@ -111,6 +112,7 @@ small {
     position: absolute;
     bottom: 10px;
     color: #333;
+    animation: blink 1s ease-in;
 }
 
 #heart {

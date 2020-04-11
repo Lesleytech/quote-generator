@@ -40,6 +40,6 @@ function showQuotes(quotes) {
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
                 ${randomQuote.text}
             </div>
-            <div id="author">${randomQuote.author === null ? "Anonymous" : randomQuote.author}</div> `;
+            <div id="author">${randomQuote.author === null ? "Anonymous" : "-" + randomQuote.author}</div> `;
     }, 500)
 }
