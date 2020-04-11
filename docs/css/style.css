@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 html,
 body {
     height: 100%;
@@ -17,6 +13,7 @@ body {
     line-height: 1.2;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1.2px;
+    overflow: hidden;
 }
 
 #loading-div {
@@ -44,6 +41,7 @@ body {
     height: fit-content;
     width: 90%;
     max-width: 600px;
+    min-width: 300px;
     background: #579;
     border-radius: 8px;
     padding: 0 30px;
@@ -66,6 +64,11 @@ body {
 
 #quote i {
     font-size: 38px;
+}
+
+#quote::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
 }
 
 #author {
@@ -116,6 +119,12 @@ small {
     animation: blink 3s infinite ease;
 }
 
+hr {
+    border: 0.7px solid #f3fcff;
+    margin-top: 30px;
+    display: none;
+}
+
 @keyframes blink {
     0% {
         opacity: 0;
@@ -136,9 +145,15 @@ small {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-height: 640px) {
     #quote {
         max-height: 300px;
-        overflow-y: scroll;
+        overflow-y: auto;
+    }
+}
+
+@media (max-height: 360px) {
+    #quote {
+        max-height: 120px;
     }
 }
